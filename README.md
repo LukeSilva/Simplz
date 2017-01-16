@@ -28,10 +28,10 @@ With these four instructions all common operations can be performed.
 
 For instance - to compare the accumulator with zero, and jump if so, the following may be used:
 ```
-  ADD $_ff
-  JPC $is_zero ; If you add 0xff to a number, the carry bit is only clear if the number is zero.
+  ADD @_ff
+  JPC @is_zero ; If you add 0xff to a number, the carry bit is only clear if the number is zero.
   ...
   
 :_ff
-  DAT 0xff
+  LIT $ff
 ```
